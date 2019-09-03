@@ -4,23 +4,43 @@
 
 
 {% block conteudo %}
-  <div class="posts">
     {% if posts.autor%}
-        <div class="autor">
-            {{ posts.autor }}
-        </div>
+
+        <h5 class="post-title">
+        post feito por: {{ posts.autor }}
+
+        </h5>
+
+
     {% endif %}
 
     {% if posts.titulo%}
-        <div class="titulo">
-            {{ posts.titulo }}
+        <div class = " col-md-11 mx-auto">
+            <h2 class = "post-title">
+                {{ posts.titulo }}
+
+            </h2>
+
         </div>
+
     {% endif %}
 
     {% if posts.texto%}
-        <div class="texto">
-            {{ posts.texto }}
-        </div>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-11 mx-auto">
+                        {{ posts.texto }}
+
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+
+
+
     {% endif %}
 
 
