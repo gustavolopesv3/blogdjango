@@ -11,3 +11,6 @@ def index(request):
 def post(request, id):
   posts = Postagem.objects.get(id = id)
   return render(request, 'blog/postagens.html', locals())
+
+def about(request):
+  return render(request, 'blog/about.html', locals())
