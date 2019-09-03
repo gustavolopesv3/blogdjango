@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+
+{% block conteudo %}
+  <div class="posts">
+    {% if posts.autor%}
+        <div class="autor">
+            {{ posts.autor }}
+        </div>
+    {% endif %}
+
+    {% if posts.titulo%}
+        <div class="titulo">
+            {{ posts.titulo }}
+        </div>
+    {% endif %}
+
+    {% if posts.texto%}
+        <div class="texto">
+            {{ posts.texto }}
+        </div>
+    {% endif %}
+
+
+  </div>
+{% endblock %}

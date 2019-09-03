@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block titulo %}
+    Autor
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Lista de Autores</h1>
+{% for i in autr %}
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">{{ i.nome }}</div>
+            <div class="card-title">{{ i.telefone }}</div>
+            <div class="card-title">{{ i.email }}</div>
+
+        </div>
+    </div>
+
+
+
+{% endfor %}
+{% endblock %}
